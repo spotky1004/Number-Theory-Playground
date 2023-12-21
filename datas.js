@@ -1,4 +1,4 @@
-import * as nt from "./funcs/_bundle.js";
+import * as nt from "./funcs/bundle.js";
 import * as logger from "./loggers.js";
 
 /**
