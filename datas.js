@@ -614,7 +614,7 @@ const datas = [
       const result = nt.exGcd(a, b, n);
       let out;
       if (result === null) out = "No solution";
-      else out = `x = ${result[0]}, x' = ${result[2]}, y = ${result[1]}, y' = ${result[3]}`;
+      else out = `x = ${result[0]}, x' = ${result[2]}, y = ${result[1]}, y' = ${-result[3]}`;
       return {
         out
       };
