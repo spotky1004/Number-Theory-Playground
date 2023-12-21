@@ -386,11 +386,11 @@ const datas = [
     strings: {
       en: {
         name: "Combination",
-        description: "\\({n \\choose r}\\ (mod\\ m)\\)\n\nCalculates combination."
+        description: "\\({n \\choose r}\\ (mod\\ p)\\)\n\nCalculates combination."
       },
       ko: {
         name: "조합",
-        description: "\\({n \\choose r}\\ (mod\\ m)\\)\n\n조합을 계산해줘요."
+        description: "\\({n \\choose r}\\ (mod\\ p)\\)\n\n조합을 계산해줘요."
       }
     },
     icon: "rule",
