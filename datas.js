@@ -145,34 +145,6 @@ const VARS = {
   }),
 }
 
-// BASIC
-// mod
-// gcd
-// lcm
-// calcDivisors
-// genPrimes
-// divAndPow
-// modInv
-// genFactMod
-// combination
-
-// ADVANCED
-// genModInv
-// genFactModInv
-// calcFib
-// isPrime
-// primeFactorization
-// eularPhi
-// genPhi
-// calcOrder
-// exGcd
-// findPrimitiveRoot
-
-// EXPERT
-// discreteLogarithm
-// discreteSqrt
-// calcPhiSum
-
 /** @type {Data[]} */
 const datas = [
   // n mod m
@@ -492,6 +464,30 @@ const datas = [
     }
   },
   // calcFib
+  {
+    strings: {
+      en: {
+        name: "Fibonacci",
+        description: "Calculate \\(n\\)th fibonacci number."
+      },
+      ko: {
+        name: "피보나치",
+        description: "\\(n\\)번째 피보나치 수를 계산해요."
+      }
+    },
+    icon: "cruelty_free",
+    color: COL.ADVANCED,
+    inputVars: [
+      VARS.N(NUMS.ZERO, NUMS.INF),
+      VARS.M(NUMS.ZERO, NUMS.INF)
+    ],
+    calcFunc: (n, m) => {
+      const result = nt.calcFib(n, m);
+      return {
+        out: `${result}`
+      };
+    }
+  },
   // isPrime
   {
     strings: {
@@ -507,7 +503,7 @@ const datas = [
     icon: "done",
     color: COL.ADVANCED,
     inputVars: [
-      VARS.N(NUMS.ZERO, NUMS.MAX_ITERABLE),
+      VARS.N(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
     ],
     calcFunc: (n) => {
       const result = nt.isPrime(n);

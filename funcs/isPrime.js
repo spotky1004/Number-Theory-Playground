@@ -1,7 +1,7 @@
 import genPrimes from "./genPrimes.js";
 import divAndPow from "./divAndPow.js";
 
-const millerRabinPrimes = genPrimes(300).map(BigInt);
+const millerRabinPrimes = genPrimes(500).map(BigInt);
 /**
  * @param {bigint} n 
  * @returns {boolean} 
