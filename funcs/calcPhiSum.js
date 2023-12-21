@@ -1,12 +1,12 @@
-const phiSumCache = new Map();
+let phiSumCache = new Map();
 /**
  * @param {bigint} n 
- * @param {bigint[]} phiSums 
  * @param {bigint} mod 
  * @returns {bigint} 
  */
-export default function clacPhiSum(n, phiSums, mod) {
-  if (n <= phiSumCount) return BigInt(phiSums[n]);
+export default function clacPhiSum(n, mod, resetCache=false) {
+  if (resetCache) phiSumCache = new Map();
+
   if (phiSumCache.has(n)) return phiSumCache.get(n);
 
   let sum = (n * (n + 1n) / 2n) % mod;
@@ -17,7 +17,7 @@ export default function clacPhiSum(n, phiSums, mod) {
     a = n / s;
     e = n / a;
 
-    sum -= clacPhiSum(a) * (e - s + 1n);
+    sum -= clacPhiSum(a, mod) * (e - s + 1n);
   }
 
   sum = ((sum % mod) + mod) % mod;

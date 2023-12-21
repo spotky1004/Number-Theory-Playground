@@ -727,6 +727,32 @@ const datas = [
       };
     }
   },
+  // Euler Sum
+  {
+    strings: {
+      en: {
+        name: "Sum of Euler's Totient",
+        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
+      },
+      ko: {
+        name: "오일러 피 합",
+        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
+      }
+    },
+    icon: "functions",
+    color: COL.EXPERT,
+    inputVars: [
+      VARS.N(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
+      VARS.M(NUMS.ZERO, NUMS.INF),
+    ],
+    calcFunc: (n, m) => {
+      const result = nt.calcPhiSum(n, m, true);
+
+      return {
+        out: `${result}`
+      };
+    }
+  },
 ];
 
 export default datas;
