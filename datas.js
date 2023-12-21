@@ -596,11 +596,11 @@ const datas = [
     strings: {
       en: {
         name: "Extended Euclidean",
-        description: "\\(a(x\\ +\\ tx\\prime)\\ +\\ b(y\\ +\\ ty\\prime)\\ =\\ n\\)\n\nCalculate \\(x\\), \\(x\\prime\\), \\(y\\) and \\(y\\prime\\)"
+        description: "\\(a(x\\ +\\ tx\\prime)\\ +\\ b(y\\ +\\ ty\\prime)\\ =\\ n\\) \\((t\\in\\mathbb{Z})\\)\n\nCalculate \\(x\\), \\(x\\prime\\), \\(y\\) and \\(y\\prime\\)"
       },
       ko: {
         name: "확장 유클리드",
-        description: "\\(a(x\\ +\\ tx\\prime)\\ +\\ b(y\\ +\\ ty\\prime)\\ =\\ n\\)\n\n위 식에서 \\(x\\), \\(x\\prime\\), \\(y\\), \\(y\\prime\\)를 계산해줘요."
+        description: "\\(a(x\\ +\\ tx\\prime)\\ +\\ b(y\\ +\\ ty\\prime)\\ =\\ n\\) \\((t\\in\\mathbb{Z})\\)\n\n위 식에서 \\(x\\), \\(x\\prime\\), \\(y\\), \\(y\\prime\\)를 계산해줘요."
       }
     },
     icon: "pivot_table_chart",
@@ -614,7 +614,7 @@ const datas = [
       const result = nt.exGcd(a, b, n);
       let out;
       if (result === null) out = "No solution";
-      else out = `x = ${result[0]}, x' = ${result[1]}, y = ${result[2]}, y' = ${result[3]}`;
+      else out = `x = ${result[0]}, x' = ${result[2]}, y = ${result[1]}, y' = ${result[3]}`;
       return {
         out
       };
@@ -736,7 +736,7 @@ const datas = [
       },
       ko: {
         name: "오일러 피 합",
-        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
+        description: "$$\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
       }
     },
     icon: "functions",
