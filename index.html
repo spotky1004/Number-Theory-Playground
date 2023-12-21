@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Theory Playground</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="./index.js" type="module"></script>
+</head>
+<body>
+  <div id="main-container">
+    <span id="func-nav">
+      <div id="func-nav__title">&gt; Functions</div>
+    </span>
+    <span id="func-screen">
+      <div id="func-title">
+        <span id="func-title__icon" class="material-symbols-outlined">question_mark</span>
+        <span id="func-title__name">:blob:</span>
+      </div>
+      <div id="func-section__title">
+        Variables
+      </div>
+      <div id="func-vars">
+        <div class="func-var">
+          <label class="func-var__name" for="var__a">\(a\)</label>
+          <input id="var__a" class="func-var__input" type="text">
+          <label class="func-var__description" for="var__a">Variable \(a\)</label>
+        </div>
+        <div class="func-var">
+          <label class="func-var__name" for="var__a">\(b\)</label>
+          <input id="var__a" class="func-var__input" type="text">
+          <label class="func-var__description" for="var__a">Variable \(b\)</label>
+        </div>
+        <div class="func-var">
+          <label class="func-var__name" for="var__a">\(c\)</label>
+          <input id="var__a" class="func-var__input" type="text">
+          <label class="func-var__description" for="var__a">Variable \(c\)</label>
+        </div>
+        <div class="func-var">
+          <label class="func-var__name" for="var__a">\(d\)</label>
+          <input id="var__a" class="func-var__input" type="text">
+          <label class="func-var__description" for="var__a">Variable \(d\)</label>
+        </div>
+      </div>
+      <div id="func-section__title">
+        Output
+      </div>
+      <div id="func-output">
+        <div>0</div>
+      </div>
+      <div id="func-section__title">
+        Description
+      </div>
+      <div id="func-description">
+        <div>\(n\ mod\ m\)</div>
+        <br>
+        <br>
+        <div>Calculates the remainder when \(n\) is divided by \(m\).</div>
+      </div>
+    </span>
+  </div>
+  
+  <div id="how-to-use">
+    Press Enter to run
+    <div id="language">
+      Language: en (click to change)
+    </div>
+  </div>
+
+  <template id="template__func-nav__item">
+    <div class="func-nav__item" style="--color: #000;">
+      <span class="func-nav__item__icon material-symbols-outlined">
+        question_mark
+      </span>
+      <span class="func-nav__item__name">Function Name</span>
+    </div>
+  </template>
+  <template id="template__func-var">
+    <div class="func-var">
+      <label class="func-var__name" for="var__?">Variable name</label>
+      <input id="var__?" class="func-var__input" type="text">
+      <label class="func-var__description" for="var__?">Variable description</label>
+    </div>
+  </template>
+</body>
+</html>

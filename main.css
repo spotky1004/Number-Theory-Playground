@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Zen+Antique&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+
+  user-select: none;
+}
+*:not(.CtxtMenu_MenuFrame *) {
+  font-family: 'Zen Antique', 'Gowun Batang', serif;
+  font-size: 2.4vmin;
+  color: #eee;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #222;
+}
+
+mjx-container.MathJax {
+  pointer-events: none;
+}
+
+#main-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+#main-container > span {
+  display: inline-block;
+}
+
+#how-to-use {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+
+  color: #d2ed98;
+}
+
+#language {
+  cursor: pointer;
+}
+
+
+
+#func-nav {
+  width: 30vw;
+
+  overflow-y: scroll;
+}
+#func-nav::-webkit-scrollbar {
+  display: none;
+}
+
+#func-screen {
+  width: 70vw;
+}
+
+#func-nav__title {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+.func-nav__item {
+  --color: #000;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4vh;
+  
+  background: linear-gradient(
+    90deg,
+    var(--color) 0%,
+    var(--color) 15%,
+    #0002 80%
+  );
+  background-size: 100%;
+
+  cursor: pointer;
+  transition: background-size 0.6s, filter 0.4s;
+}
+.func-nav__item:hover {
+  background-size: 150%;
+  filter: brightness(1.1);
+}
+
+.func-nav__item__icon {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.6vw;
+
+  width: 1.8vw;
+  height: 1.8vw;
+
+  mix-blend-mode: overlay;
+  color: var(--color);
+  font-size: 1.2vw !important;
+  text-shadow: 0 0 1vw #000;
+
+  background-color: #222;
+  border-radius: 50%;
+  border: solid 0.15vw var(--color);
+  box-shadow: 0 0 1vw #222;
+
+  transition: color 0.3s, background-color 0.3s;
+}
+.func-nav__item:hover > .func-nav__item__icon {
+  color: #222;
+  background-color: #fff;
+}
+
+.func-nav__item__name {
+  display: inline-flex;
+  width: 25vw;
+  height: 2.4vw;
+  align-items: center;
+
+  color: #111;
+  font-weight: bold;
+
+  mix-blend-mode: overlay;
+
+  transition: color 0.3s;
+}
+.func-nav__item:hover > .func-nav__item__name {
+  color: #eee;
+}
+
+
+
+#func-title {
+  display: inline-block;
+
+  --color: #000;
+
+  width: 100%;
+  height: 8vh;
+
+  filter: brightness(1.2);
+  background-color: var(--color);
+}
+
+#func-title__icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 8vh;
+  aspect-ratio: 1.5 / 1;
+
+  font-size: 6vh;
+  text-align: center;
+  text-shadow: 0 0 0.7vmin #aaa;
+
+  background-color: #222;
+
+  mix-blend-mode: overlay;
+}
+
+#func-title__name {
+  color: #000;
+  font-weight: bold;
+  font-size: 6vh;
+
+  mix-blend-mode: overlay;
+}
+
+.func-section__title {
+  height: 3vh;
+  font-size: 2vh;
+}
+
+#func-vars {
+  counter-reset: count;
+
+  height: 22vh;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #111;
+}
+
+.func-var {
+  display: flex;
+  align-items: center;
+  height: 5.5vh;
+  padding-left: 3vh;
+
+  transition: background-color 0.3s;
+}
+.func-var:nth-child(2n) {
+  background-color: #fff1;
+}
+.func-var:hover {
+  background-color: #fff5;
+}
+
+.func-var__name {
+  position: relative;
+
+  min-width: 8vw;
+  text-align: right;
+}
+.func-var__name::before {
+  counter-increment: count;
+
+  position: absolute;
+  bottom: 60%;
+  right: 90%;
+
+  content: "#" counter(count);
+  font-size: 0.7em;
+  opacity: 0.6;
+}
+.func-var__name::after {
+  content: " =";
+}
+
+.func-var__name * {
+  font-size: 5vh;
+}
+
+.func-var__input {
+  margin: 0 1vh;
+  padding-left: 2vh;
+
+  background-color: #4448;
+  box-shadow: 0 0 2vmin #000 inset;
+  border: none;
+  outline: none;
+}
+
+#func-output {
+  height: 27vh;
+  background-color: #111;
+
+  white-space: normal;
+  overflow-y: auto;
+}
+#func-output * {
+  user-select: text !important;
+}
+
+#func-description {
+  padding: 1vh 0 1vh 1vw;
+  height: 30vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #111;
+}
+
+#func-description > * {
+  font-size: 1.8vmin;
+}
