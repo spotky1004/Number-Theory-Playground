@@ -4,6 +4,8 @@
  * @param {bigint} mod
 */
 export default function divAndPow(a, b, mod) {
+  if (b === 0n) return 1n;
+
   let out = 1n;
   let curMul = a;
   const loopCount = BigInt(Math.ceil(Math.log2(Number(b))) + 1);
