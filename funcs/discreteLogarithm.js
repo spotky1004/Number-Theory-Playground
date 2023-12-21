@@ -12,7 +12,7 @@ export default function genLogSolver(n) {
   if (!isPrime(n)) throw "TBA: CRT";
 
   const phiN = eularPhi(n, primeFactorization(n));
-  const g = findPrimitiveRoot(n, phiN);
+  const g = findPrimitiveRoot(n, phiN)[0];
 
   const sqrtPhiN = BigInt(Math.ceil(Math.sqrt(Number(phiN))));
 
