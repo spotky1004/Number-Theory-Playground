@@ -382,6 +382,7 @@ const datas = [
     }
   },
   // Combination
+  // TODO: CRT
   {
     strings: {
       en: {
@@ -669,6 +670,7 @@ const datas = [
     }
   },
   // Discrete Logarithm
+  // TODO: CRT
   {
     strings: {
       en: {
@@ -695,7 +697,8 @@ const datas = [
       };
     }
   },
-  // Discrete Logarithm
+  // Discrete Sqrt
+  // TODO: CRT
   {
     strings: {
       en: {
