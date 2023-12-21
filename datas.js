@@ -398,11 +398,11 @@ const datas = [
     inputVars: [
       VARS.N(NUMS.ZERO, NUMS.MAX_MEMORY),
       VARS.R(NUMS.ZERO, NUMS.MAX_MEMORY),
-      VARS.M(NUMS.ZERO, NUMS.INF),
+      VARS.P(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
     ],
-    calcFunc: (n, r, m) => {
-      const factorials = nt.genFactMod(Math.max(Number(n), Number(r)), m).map(BigInt);
-      const result = nt.combination(n, r, m, factorials);
+    calcFunc: (n, r, p) => {
+      const factorials = nt.genFactMod(Math.max(Number(n), Number(r)), p).map(BigInt);
+      const result = nt.combination(n, r, p, factorials);
       return {
         out: `${result}`
       };
