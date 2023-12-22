@@ -96,10 +96,10 @@ export function createVariableItem(data) {
   conditionStr += ")\\)";
 
   subEls.name.innerText = `\\(${name}\\)`;
-  subEls.name.for = `var__${name}`;
+  subEls.name.setAttribute("for", `var__${name}`);
   subEls.input.id = `var__${name}`;
   subEls.description.innerText = `${description} ${conditionStr}`;
-  subEls.description.for = `var__${name}`;
+  subEls.description.setAttribute("for", `var__${name}`);
   els.func.vars.appendChild(el);
 
   MathJax.typeset();
