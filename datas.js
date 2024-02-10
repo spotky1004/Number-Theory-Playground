@@ -41,11 +41,11 @@ const COL = {
 export const NUMS = {
   ZERO: 0n,
   ONE: 1n,
-  MAX_MEMORY: 10n**8n,
-  MAX_ITERABLE: 10n**10n,
-  MAX_FACTORIZATIONABLE: 10n**50n,
-  INF: 10n**10n**6n,
-  MINUS_INF: -(10n**10n**6n)
+  MAX_MEMORY: 10n ** 8n,
+  MAX_ITERABLE: 10n ** 10n,
+  MAX_FACTORIZATIONABLE: 10n ** 50n,
+  INF: 10n ** 10n ** 6n,
+  MINUS_INF: -(10n ** 10n ** 6n)
 };
 
 /**
@@ -329,18 +329,18 @@ const datas = [
       en: {
         name: "Modular Inverse",
         description: "\\(1 / n \\equiv x (mod m)\\)\n" +
-        "\n" +
-        "Calculate \\(x\\) when \\(1 / n \\equiv x (mod m)\\)\n" +
-        "\\(x \\equiv n^{m - 2} (mod m)\\) (when \\(m\\) is prime)\n" +
-        "\\(x \\equiv n^{\\phi(m) - 1} (mod m)\\) (\\(\\phi(x)\\) is Euler's Totient Function)"
+          "\n" +
+          "Calculate \\(x\\) when \\(1 / n \\equiv x (mod m)\\)\n" +
+          "\\(x \\equiv n^{m - 2} (mod m)\\) (when \\(m\\) is prime)\n" +
+          "\\(x \\equiv n^{\\phi(m) - 1} (mod m)\\) (\\(\\phi(x)\\) is Euler's Totient Function)"
       },
       ko: {
         name: "모듈로 역원",
         description: "\\(1 / n \\equiv x (mod m)\\)\n" +
-        "\n" +
-        "\\(1 / n \\equiv x (mod m)\\)에서 \\(x\\)를 구해줘요\n" +
-        "\\(x \\equiv n^{m - 2} (mod m)\\) (\\(m\\)은 소수)\n" +
-        "\\(x \\equiv n^{\\phi(m) - 1} (mod m)\\) (\\(\\phi(x)\\) 는 오일러 피 함수)"
+          "\n" +
+          "\\(1 / n \\equiv x (mod m)\\)에서 \\(x\\)를 구해줘요\n" +
+          "\\(x \\equiv n^{m - 2} (mod m)\\) (\\(m\\)은 소수)\n" +
+          "\\(x \\equiv n^{\\phi(m) - 1} (mod m)\\) (\\(\\phi(x)\\) 는 오일러 피 함수)"
       }
     },
     icon: "invert_colors",
@@ -364,8 +364,8 @@ const datas = [
         description: "Generates Factorial Modulos in range (\\(1\\) ~ \\(n\\))."
       },
       ko: {
-        name: "펙토리얼 생성",
-        description: "(\\(1\\) ~ \\(n\\)) 구간의 펙토리얼을 \\(m\\)으로 나눈 나머지를 구해줘요."
+        name: "팩토리얼 생성",
+        description: "(\\(1\\) ~ \\(n\\)) 구간의 팩토리얼을 \\(m\\)으로 나눈 나머지를 구해줘요."
       }
     },
     icon: "heap_snapshot_large",
@@ -444,8 +444,8 @@ const datas = [
         description: "Generates Factorial Modulo Inverse in range (\\(1\\) ~ \\(n\\))."
       },
       ko: {
-        name: "펙토리얼 모듈로 역원 생성",
-        description: "(\\(1\\) ~ \\(n\\)) 구간의 펙토리얼 모듈로 역원을 구해줘요."
+        name: "팩토리얼 모듈로 역원 생성",
+        description: "(\\(1\\) ~ \\(n\\)) 구간의 팩토리얼 모듈로 역원을 구해줘요."
       }
     },
     icon: "heap_snapshot_multiple",
