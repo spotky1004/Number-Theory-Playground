@@ -621,11 +621,11 @@ const datas = [
     strings: {
       en: {
         name: "Sum of Harmonic Series",
-        description: "\\(\\sum_{k=1}^{\\infty}\\frac{n}{k}\\)",
+        description: "\\(\\sum_{k=1}^{\\infty}\\lfloor\\frac{n}{k}\\rfloor\\)",
       },
       ko: {
         name: "조화수열의 합",
-        description: "\\(\\sum_{k=1}^{\\infty}\\frac{n}{k}\\)"
+        description: "\\(\\sum_{k=1}^{\\infty}\\lfloor\\frac{n}{k}\\rfloor\\)"
       }
     },
     icon: "stairs",
