@@ -617,6 +617,50 @@ const datas = [
       };
     }
   },
+  {
+    strings: {
+      en: {
+        name: "Sum of Harmonic Series",
+        description: "\\(\\sum_{k=1}^{\\infty}\\frac{n}{k}\\)",
+      },
+      ko: {
+        name: "조화수열의 합",
+        description: "\\(\\sum_{k=1}^{\\infty}\\frac{n}{k}\\)"
+      }
+    },
+    icon: "stairs",
+    color: COL.ADVANCED,
+    inputVars: [
+      VARS.N(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE)
+    ],
+    calcFunc: (n) => {
+      return {
+        out: nt.harmonicSum(n).toString()
+      };
+    }
+  },
+  {
+    strings: {
+      en: {
+        name: "Sum of Sum of Factors",
+        description: "Calculates (sum of factors of \\(1\\)) + (sum of factors of \\(2\\)) + \\(\\ldots\\) + (sum of factors of \\(n\\))"
+      },
+      ko: {
+        name: "약수의 합의 합",
+        description: "(\\(1\\)의 약수의 합) + (\\(2\\)의 약수의 합) + \\(\\ldots\\) + (\\(n\\)의 약수의 합)을 계산해요"
+      }
+    },
+    icon: "widgets",
+    color: COL.ADVANCED,
+    inputVars: [
+      VARS.N(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE)
+    ],
+    calcFunc: (n) => {
+      return {
+        out: nt.factorSumSum(n).toString()
+      }
+    }
+  },
   // calcOrder
   {
     strings: {
@@ -735,7 +779,7 @@ const datas = [
       },
       ko: {
         name: "오일러 피 합",
-        description: "$$\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
+        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
       }
     },
     icon: "functions",
