@@ -397,16 +397,23 @@ const datas = [
     icon: "rule",
     color: COL.BASIC,
     inputVars: [
-      VARS.N(NUMS.ZERO, NUMS.MAX_MEMORY),
-      VARS.R(NUMS.ZERO, NUMS.MAX_MEMORY),
+      VARS.N(NUMS.ZERO, NUMS.INF),
+      VARS.R(NUMS.ZERO, NUMS.INF),
       VARS.P(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
     ],
     calcFunc: (n, r, p) => {
-      const factorials = nt.genFactMod(Math.max(Number(n), Number(r)), p).map(BigInt);
-      const result = nt.combination(n, r, p, factorials);
-      return {
-        out: `${result}`
-      };
+      if (p < NUMS.MAX_MEMORY) {
+        const result = nt.combinationLucas(p)(n, r);
+        return {
+          out: `${result}`
+        };
+      } else {
+        const factorials = nt.genFactMod(Math.max(Number(n), Number(r)), p).map(BigInt);
+        const result = nt.combination(n, r, p, factorials);
+        return {
+          out: `${result}`
+        };
+      }
     }
   },
   // Generate Modular Inverse

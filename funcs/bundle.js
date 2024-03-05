@@ -3,6 +3,7 @@ export { default as calcFib } from "./calcFib.js";
 export { default as calcOrder } from "./calcOrder.js";
 export { default as calcPhiSum } from "./calcPhiSum.js";
 export { default as combination } from "./combination.js";
+export { default as combinationLucas } from "./combinationLucas.js";
 export { default as discreteLogarithm } from "./discreteLogarithm.js";
 export { default as divAndPow } from "./divAndPow.js";
 export { default as eularPhi } from "./eularPhi.js";
