@@ -737,7 +737,10 @@ const datas = [
     color: COL.EXPERT,
     inputVars: [
       VARS.A(NUMS.ZERO, NUMS.MAX_ITERABLE),
-      VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
+      {
+        ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
+        isPrime: true
+      },
     ],
     calcFunc: (a, m) => {
       const { g, log } = nt.discreteLogarithm(m);
@@ -766,7 +769,10 @@ const datas = [
     inputVars: [
       VARS.A(NUMS.ZERO, NUMS.MAX_ITERABLE),
       VARS.B(NUMS.ZERO, NUMS.MAX_ITERABLE),
-      VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
+      {
+        ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
+        isPrime: true
+      },
     ],
     calcFunc: (a, b, m) => {
       const { sqrt } = nt.discreteLogarithm(m);
