@@ -84,9 +84,16 @@ function run() {
     }
   }
 
-  const result = calcFunc(...varValues);
-  els.func.output.innerHTML = htmlify(result.out);
-  MathJax.typeset();
+  try {
+    const result = calcFunc(...varValues);
+    els.func.output.innerHTML = htmlify(result.out);
+    MathJax.typeset();
+  } catch (e) {
+    els.func.output.innerHTML = htmlify(`Error! (${e.name})`);
+    MathJax.typeset();
+    console.error(e);
+    return false;
+  }
 
   return true;
 }

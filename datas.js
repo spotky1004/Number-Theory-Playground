@@ -432,14 +432,14 @@ const datas = [
     color: COL.ADVANCED,
     inputVars: [
       VARS.N(NUMS.ZERO, NUMS.MAX_ITERABLE),
-      VARS.P(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
+      VARS.M(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
     ],
-    calcFunc: (n, p) => {
-      const result = nt.genModInv(Number(n), p);
+    calcFunc: (n, m) => {
+      const result = nt.genModInv(Number(n), m);
       result.shift();
 
       return {
-        out: `${result.join(", ")}`
+        out: `${result.map(v => v + "").join(", ")}`
       };
     }
   },
