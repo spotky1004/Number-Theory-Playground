@@ -624,6 +624,7 @@ const datas = [
       };
     }
   },
+  // harmonicSum
   {
     strings: {
       en: {
@@ -646,6 +647,7 @@ const datas = [
       };
     }
   },
+  // factorSumSum
   {
     strings: {
       en: {
@@ -694,6 +696,7 @@ const datas = [
     }
   },
   // findPrimitiveRoot
+  // TODO: CRT
   {
     strings: {
       en: {
