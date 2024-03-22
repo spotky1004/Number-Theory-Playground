@@ -717,7 +717,6 @@ const datas = [
     calcFunc: (n, m) => {
       const phiM = nt.eularPhi(m, nt.primeFactorization(m));
       const result = nt.findPrimitiveRoot(m, phiM, Number(n));
-      console.log(m, phiM, result);
       return {
         out: `${result.length > 0 ? result.join(", ") : "No solution"}`
       };
