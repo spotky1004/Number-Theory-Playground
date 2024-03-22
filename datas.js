@@ -712,7 +712,10 @@ const datas = [
     color: COL.ADVANCED,
     inputVars: [
       VARS.N(NUMS.ONE, NUMS.MAX_ITERABLE),
-      VARS.M(NUMS.ONE, NUMS.MAX_FACTORIZATIONABLE),
+      {
+        ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
+        isPrime: true
+      }
     ],
     calcFunc: (n, m) => {
       const phiM = nt.eularPhi(m, nt.primeFactorization(m));
