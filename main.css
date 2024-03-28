@@ -12,6 +12,16 @@
   color: #eee;
 }
 
+*::-webkit-scrollbar {
+  width: 0.6vmax;
+  height: 0.6vmax;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #666;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -51,6 +61,8 @@ mjx-container.MathJax {
 #func-nav {
   width: 30vw;
 
+  padding-top: 5vh;
+  padding-bottom: 3vh;
   overflow-y: scroll;
 }
 #func-nav::-webkit-scrollbar {
@@ -62,8 +74,42 @@ mjx-container.MathJax {
 }
 
 #func-nav__title {
+  position: fixed;
+  top: 0;
+  width: 30vw;
+  height: 7vh;
+
+  color: #222;
+  text-shadow: #eee 0 0 3px;
+  text-align: center;
   font-size: 1.6em;
   font-weight: bold;
+
+  background: linear-gradient(
+    180deg,
+    #222,
+    #2220
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+#func-nav::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30vw;
+  height: 7vh;
+  content: "";
+
+  background: linear-gradient(
+    0deg,
+    #222,
+    #2220
+  );
+
+  z-index: 1;
+  pointer-events: none;
 }
 
 .func-nav__item {
@@ -178,8 +224,9 @@ mjx-container.MathJax {
 }
 
 .func-section__title {
-  height: 3vh;
-  font-size: 2vh;
+  height: 3.6vh;
+  padding-left: 0.5vw;
+  font-size: 2.5vh;
 }
 
 #func-vars {
