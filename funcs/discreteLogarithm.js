@@ -1,7 +1,7 @@
 import divAndPow from "./divAndPow.js";
 import eularPhi from "./eularPhi.js";
 import isPrime from "./isPrime.js";
-import egcd from "./egcd.js/index.js";
+import egcd from "./egcd.js";
 import primeFactorization from "./primeFactorization.js";
 import findPrimitiveRoot from "./findPrimitiveRoot.js";
 
