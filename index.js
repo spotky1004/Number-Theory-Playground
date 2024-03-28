@@ -9,6 +9,8 @@ window.lang = window.localStorage.getItem(STORAGE_KEY);
 import isPrime from "./funcs/isPrime.js";
 import els, { createNavItem, createVariableItem } from "./els.js";
 import datas from "./datas.js";
+import * as nt from "./funcs/bundle.js";
+window.nt = nt;
 
 let curData = datas[0];
 
