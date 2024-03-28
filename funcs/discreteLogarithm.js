@@ -1,7 +1,7 @@
 import divAndPow from "./divAndPow.js";
 import eularPhi from "./eularPhi.js";
 import isPrime from "./isPrime.js";
-import exGcd from "./exGcd.js";
+import egcd from "./egcd.js/index.js";
 import primeFactorization from "./primeFactorization.js";
 import findPrimitiveRoot from "./findPrimitiveRoot.js";
 
@@ -73,7 +73,7 @@ export default function genLogSolver(n) {
 
     // "?^r = x (mod n)" -> "g^(ur) = g^v (mod n)" -> "g^(ur - v) = 1 (mod n)" -> "ur = v (mod phi(n))" -> "ru + phi(n)t = v"
     const v = log(x);
-    const exGcdVal = exGcd(r, phiN, v);
+    const exGcdVal = egcd(r, phiN, v);
     if (exGcdVal === null) return -1n;
     let [u, , uShift] = exGcdVal;
     /** @type {Set<bigint>} */

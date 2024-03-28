@@ -7,7 +7,7 @@ export { default as combinationLucas } from "./combinationLucas.js";
 export { default as discreteLogarithm } from "./discreteLogarithm.js";
 export { default as divAndPow } from "./divAndPow.js";
 export { default as eularPhi } from "./eularPhi.js";
-export { default as exGcd } from "./exGcd.js";
+export { default as egcd } from "./egcd.js/index.js";
 export { default as factorSum } from "./factorSum.js";
 export { default as factorSumSum } from "./factorSumSum.js";
 export { default as findPrimitiveRoot } from "./findPrimitiveRoot.js";

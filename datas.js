@@ -595,7 +595,7 @@ const datas = [
       };
     }
   },
-  // exGcd
+  // egcd
   {
     strings: {
       en: {
@@ -615,7 +615,7 @@ const datas = [
       VARS.N(NUMS.ZERO, NUMS.INF),
     ],
     calcFunc: (a, b, n) => {
-      const result = nt.exGcd(a, b, n);
+      const result = nt.egcd(a, b, n);
       let out;
       if (result === null) out = "No solution";
       else out = `x = ${result[0]}, x' = ${result[2]}, y = ${result[1]}, y' = ${-result[3]}`;
