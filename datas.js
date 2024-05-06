@@ -726,13 +726,13 @@ const datas = [
     icon: "memory",
     color: COL.ADVANCED,
     inputVars: [
+      VARS.G(NUMS.ONE, NUMS.MAX_ITERABLE),
       {
         ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
         isPrime: true
       },
-      VARS.G(NUMS.ONE, NUMS.MAX_ITERABLE)
     ],
-    calcFunc: (m, g) => {
+    calcFunc: (g, m) => {
       const result = nt.isPrimitiveRoot(m, g);
       return {
         out: `${result}`
@@ -774,28 +774,29 @@ const datas = [
     strings: {
       en: {
         name: "Discrete Logarithm",
-        description: "\\(g^x\\ \\equiv\\ a\\ (mod\\ m)\\)\n\nFind \\(g\\) and \\(x\\) in the expression."
+        description: "\\(g^x\\ \\equiv\\ a\\ (mod\\ m)\\)\n\nFind \\(x\\) in the expression."
       },
       ko: {
         name: "이산 로그",
-        description: "\\(g^x\\ \\equiv\\ a\\ (mod\\ m)\\)\n\n위의 식에서 \\(g\\) 와 \\(x\\)의 값을 찾아줘요."
+        description: "\\(g^x\\ \\equiv\\ a\\ (mod\\ m)\\)\n\n위의 식에서 \\(x\\)의 값을 찾아줘요."
       }
     },
     icon: "stat_minus_1",
     color: COL.EXPERT,
     inputVars: [
       VARS.A(NUMS.ZERO, NUMS.MAX_ITERABLE),
+      VARS.G(NUMS.ZERO, NUMS.MAX_ITERABLE),
       {
         ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
         isPrime: true
       },
     ],
-    calcFunc: (a, m) => {
-      const { g, log } = nt.discreteLogarithm(m);
+    calcFunc: (a, g, m) => {
+      const { log } = nt.discreteLogarithm(m, g);
       const result = log(a);
 
       return {
-        out: `g = ${g}, x = ${result}`
+        out: `${result}`
       };
     }
   },

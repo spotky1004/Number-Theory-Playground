@@ -3,16 +3,17 @@ import eularPhi from "./eularPhi.js";
 import isPrime from "./isPrime.js";
 import egcd from "./egcd.js";
 import primeFactorization from "./primeFactorization.js";
-import findPrimitiveRoot from "./findPrimitiveRoot.js";
+import isPrimitiveRoot from "./isPrimitiveRoot.js";
 
 /**
  * @param {bigint} n 
+ * @param {bigint} g 
  */
-export default function genLogSolver(n) {
+export default function genLogSolver(n, g) {
   if (!isPrime(n)) throw "TBA: CRT";
+  if (!isPrimitiveRoot(n, g)) throw `${g} isn't a primitive root of ${n}`;
 
   const phiN = eularPhi(n, primeFactorization(n));
-  const g = findPrimitiveRoot(n, phiN)[0];
 
   const sqrtPhiN = BigInt(Math.ceil(Math.sqrt(Number(phiN))));
 
@@ -90,5 +91,5 @@ export default function genLogSolver(n) {
     return result;
   }
 
-  return { g, log, sqrt };
+  return { log, sqrt };
 }
