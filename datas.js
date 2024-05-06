@@ -837,21 +837,20 @@ const datas = [
     strings: {
       en: {
         name: "Sum of Euler's Totient",
-        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
+        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\)"
       },
       ko: {
         name: "오일러 피 합",
-        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\ (mod\\ m)\\)"
+        description: "\\(\\sum_{k=1}^{n}\\phi(k)\\)"
       }
     },
     icon: "functions",
     color: COL.EXPERT,
     inputVars: [
-      VARS.N(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
-      VARS.M(NUMS.ZERO, NUMS.INF),
+      VARS.N(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE)
     ],
     calcFunc: (n, m) => {
-      const result = nt.calcPhiSum(n, m, true);
+      const result = nt.calcPhiSum(n, true);
 
       return {
         out: `${result}`
