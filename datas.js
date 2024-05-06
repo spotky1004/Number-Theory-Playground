@@ -785,7 +785,19 @@ const datas = [
     color: COL.EXPERT,
     inputVars: [
       VARS.A(NUMS.ZERO, NUMS.MAX_ITERABLE),
-      VARS.G(NUMS.ZERO, NUMS.MAX_ITERABLE),
+      {
+        ...VARS.G(NUMS.ZERO, NUMS.MAX_ITERABLE),
+        strings: {
+          ko: {
+            name: "g",
+            description: "변수 g, m의 원시근"
+          },
+          en: {
+            name: "g",
+            description: "Variable g, primitive root of m"
+          }
+        }
+      },
       {
         ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
         isPrime: true
