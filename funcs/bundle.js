@@ -19,6 +19,7 @@ export { default as genPhi } from "./genPhi.js";
 export { default as genPrimes } from "./genPrimes.js";
 export { default as harmonicSum } from "./harmonicSum.js";
 export { default as isPrime } from "./isPrime.js";
+export { default as isPrimitiveRoot } from "./isPrimitiveRoot.js";
 export { default as lcm } from "./lcm.js";
 export { default as mod } from "./mod.js";
 export { default as modInv } from "./modInv.js";

@@ -113,6 +113,21 @@ const VARS = {
     max
   }),
   /** @type {VarsFunc} */
+  G: (min, max) => ({
+    strings: {
+      en: {
+        name: "g",
+        description: "Variable g"
+      },
+      ko: {
+        name: "g",
+        description: "변수 g"
+      }
+    },
+    min,
+    max
+  }),
+  /** @type {VarsFunc} */
   P: (min, max) => ({
     strings: {
       en: {
@@ -695,6 +710,35 @@ const datas = [
       };
     }
   },
+  // isPrimitiveRoot
+  // TODO: CRT
+  {
+    strings: {
+      en: {
+        name: "Check Primitive Root",
+        description: "Check \\(g\\) is a Primitive Root of \\(m\\)."
+      },
+      ko: {
+        name: "원시근 판정",
+        description: "\\(g\\)가 \\(m\\)의 원시근인지 확인해줘요."
+      }
+    },
+    icon: "memory",
+    color: COL.ADVANCED,
+    inputVars: [
+      {
+        ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
+        isPrime: true
+      },
+      VARS.G(NUMS.ONE, NUMS.MAX_ITERABLE)
+    ],
+    calcFunc: (m, g) => {
+      const result = nt.isPrimitiveRoot(m, g);
+      return {
+        out: `${result}`
+      };
+    }
+  },
   // findPrimitiveRoot
   // TODO: CRT
   {
@@ -705,19 +749,19 @@ const datas = [
       },
       ko: {
         name: "원시근 생성",
-        description: "\\(m\\)에 대한 가장 작은 원시근 \\(n\\)개를 찾아줘요."
+        description: "\\(m\\)에 대한 원시근 \\(n\\)개를 찾아줘요."
       }
     },
     icon: "select_all",
     color: COL.ADVANCED,
     inputVars: [
-      VARS.N(NUMS.ONE, NUMS.MAX_ITERABLE),
       {
         ...VARS.M(NUMS.ZERO, NUMS.MAX_ITERABLE),
         isPrime: true
-      }
+      },
+      VARS.N(NUMS.ONE, NUMS.MAX_ITERABLE)
     ],
-    calcFunc: (n, m) => {
+    calcFunc: (m, n) => {
       const result = nt.findPrimitiveRoot(m, Number(n));
       return {
         out: `${result.length > 0 ? result.join(", ") : "No solution"}`
