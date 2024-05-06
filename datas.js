@@ -700,11 +700,11 @@ const datas = [
   {
     strings: {
       en: {
-        name: "Primitive Root",
-        description: "Find \\(n\\) Primitive Root for \\(m\\)."
+        name: "Gen Primitive Root",
+        description: "Find \\(n\\) Primitive Roots for \\(m\\)."
       },
       ko: {
-        name: "원시근",
+        name: "원시근 생성",
         description: "\\(m\\)에 대한 가장 작은 원시근 \\(n\\)개를 찾아줘요."
       }
     },
@@ -718,8 +718,7 @@ const datas = [
       }
     ],
     calcFunc: (n, m) => {
-      const phiM = nt.eularPhi(m, nt.primeFactorization(m));
-      const result = nt.findPrimitiveRoot(m, phiM, Number(n));
+      const result = nt.findPrimitiveRoot(m, Number(n));
       return {
         out: `${result.length > 0 ? result.join(", ") : "No solution"}`
       };

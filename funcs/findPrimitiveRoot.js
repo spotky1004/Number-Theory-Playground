@@ -1,12 +1,13 @@
+import eularPhi from "./eularPhi.js";
 import primeFactorization from "./primeFactorization.js";
 import calcOrder from "./calcOrder.js";
 
 /**
  * @param {bigint} n 
- * @param {bigint} phiN 
  * @param {number} count 
  */
-export default function findPrimitiveRoot(n, phiN, count=1) {
+export default function findPrimitiveRoot(n, count=1) {
+  const phiN = eularPhi(n, primeFactorization(n));
   const phiNFactorization = primeFactorization(phiN);
   const out = [];
   for (let g = 2n; g < n; g++) {
