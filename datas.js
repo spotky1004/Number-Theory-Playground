@@ -233,7 +233,7 @@ const datas = [
       VARS.M(NUMS.MINUS_INF, NUMS.INF)
     ],
     calcFunc: (a, b, mod) => {
-      const result = nt.mod(a * b, mod);
+      const result = nt.multiply(a, b, mod);
       return {
         out: `${result}`
       };
