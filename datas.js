@@ -178,10 +178,36 @@ const datas = [
     color: COL.BASIC,
     inputVars: [
       VARS.N(NUMS.MINUS_INF, NUMS.INF),
-      VARS.M(NUMS.ZERO, NUMS.INF)
+      VARS.M(NUMS.MINUS_INF, NUMS.INF)
     ],
     calcFunc: (n, mod) => {
       const result = nt.mod(n, mod);
+      return {
+        out: `${result}`
+      };
+    }
+  },
+  // Add
+  {
+    strings: {
+      en: {
+        name: "Add",
+        description: "Calculates \\(a\\ +\\ b\\ mod\\ m\\)."
+      },
+      ko: {
+        name: "더하기",
+        description: "\\(a\\ +\\ b\\ mod\\ m\\)을 계산해요."
+      }
+    },
+    icon: "add",
+    color: COL.BASIC,
+    inputVars: [
+      VARS.A(NUMS.MINUS_INF, NUMS.INF),
+      VARS.B(NUMS.MINUS_INF, NUMS.INF),
+      VARS.M(NUMS.MINUS_INF, NUMS.INF)
+    ],
+    calcFunc: (a, b, mod) => {
+      const result = nt.mod(a + b, mod);
       return {
         out: `${result}`
       };
@@ -381,7 +407,7 @@ const datas = [
       },
       ko: {
         name: "나누기",
-        description: "Calculates \\(\\frac{a}{b}\\ mod\\ m\\)."
+        description: "\\(\\frac{a}{b}\\ mod\\ m\\)를 계산해요."
       }
     },
     icon: "chips",
