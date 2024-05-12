@@ -371,6 +371,31 @@ const datas = [
       };
     }
   },
+  // Factoiral
+  {
+    strings: {
+      en: {
+        name: "Factorial",
+        description: "Calculates \\(n! mod n\\)."
+      },
+      ko: {
+        name: "팩토리얼",
+        description: "\\(n!\\ mod\\ n\\)을 계산해요."
+      }
+    },
+    icon: "priority_high",
+    color: COL.BASIC,
+    inputVars: [
+      VARS.N(NUMS.ZERO, NUMS.MAX_ITERABLE),
+      VARS.M(NUMS.ZERO, NUMS.INF),
+    ],
+    calcFunc: (n, m) => {
+      const result = nt.factMod(Number(n), Number(m));
+      return {
+        out: result.toString()
+      };
+    }
+  },
   // Generate Factorial Mod
   {
     strings: {
@@ -470,7 +495,7 @@ const datas = [
         description: "(\\(1\\) ~ \\(n\\)) 구간의 팩토리얼 모듈로 역원을 구해줘요."
       }
     },
-    icon: "heap_snapshot_multiple",
+    icon: "assignment_late",
     color: COL.ADVANCED,
     inputVars: [
       VARS.N(NUMS.ZERO, NUMS.MAX_ITERABLE),
