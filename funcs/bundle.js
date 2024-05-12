@@ -6,6 +6,7 @@ export { default as combination } from "./combination.js";
 export { default as combinationLucas } from "./combinationLucas.js";
 export { default as discreteLogarithm } from "./discreteLogarithm.js";
 export { default as divAndPow } from "./divAndPow.js";
+export { default as divide } from "./divide.js";
 export { default as eularPhi } from "./eularPhi.js";
 export { default as egcd } from "./egcd.js";
 export { default as factMod } from "./factMod.js";

@@ -371,6 +371,36 @@ const datas = [
       };
     }
   },
+  // Divide
+  // TODO: CRT
+  {
+    strings: {
+      en: {
+        name: "Divide",
+        description: "Calculates \\(\\frac{a}{b}\\ mod\\ m\\)."
+      },
+      ko: {
+        name: "나누기",
+        description: "Calculates \\(\\frac{a}{b}\\ mod\\ m\\)."
+      }
+    },
+    icon: "chips",
+    color: COL.BASIC,
+    inputVars: [
+      VARS.A(NUMS.ZERO, NUMS.INF),
+      VARS.B(NUMS.ZERO, NUMS.INF),
+      {
+        ...VARS.M(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
+        isPrime: true
+      }
+    ],
+    calcFunc: (a, b, m) => {
+      const result = nt.divide(a, b, m);
+      return {
+        out: `${result}`
+      };
+    }
+  },
   // Factoiral
   {
     strings: {
@@ -392,7 +422,7 @@ const datas = [
     calcFunc: (n, m) => {
       const result = nt.factMod(Number(n), Number(m));
       return {
-        out: result.toString()
+        out: `${result}`
       };
     }
   },
