@@ -213,6 +213,32 @@ const datas = [
       };
     }
   },
+  // Multiply
+  {
+    strings: {
+      en: {
+        name: "Multiply",
+        description: "Calculates \\(a\\ \\times\\ b\\ mod\\ m\\)."
+      },
+      ko: {
+        name: "곱하기",
+        description: "\\(a\\ \\times\\ b\\ mod\\ m\\)을 계산해요."
+      }
+    },
+    icon: "close",
+    color: COL.BASIC,
+    inputVars: [
+      VARS.A(NUMS.MINUS_INF, NUMS.INF),
+      VARS.B(NUMS.MINUS_INF, NUMS.INF),
+      VARS.M(NUMS.MINUS_INF, NUMS.INF)
+    ],
+    calcFunc: (a, b, mod) => {
+      const result = nt.mod(a * b, mod);
+      return {
+        out: `${result}`
+      };
+    }
+  },
   // gcd(a, b)
   {
     strings: {
