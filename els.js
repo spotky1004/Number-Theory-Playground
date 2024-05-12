@@ -102,7 +102,7 @@ export function createVariableItem(data) {
   subEls.description.setAttribute("for", `var__${name}`);
   els.func.vars.appendChild(el);
 
-  MathJax.typeset();
+  if (MathJax) MathJax.typeset();
 
   return {
     el,
