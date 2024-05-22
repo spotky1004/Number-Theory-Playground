@@ -42,8 +42,8 @@ export const NUMS = {
   ZERO: 0n,
   ONE: 1n,
   MAX_MEMORY: 10n ** 8n,
-  MAX_ITERABLE: 10n ** 10n,
-  MAX_FACTORIZATIONABLE: 10n ** 50n,
+  MAX_ITERABLE: 10n ** 11n,
+  MAX_FACTORIZATIONABLE: 10n ** 100n,
   INF: 10n ** 10n ** 5n,
   MINUS_INF: -(10n ** 10n ** 5n)
 };
