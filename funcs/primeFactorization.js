@@ -10,7 +10,6 @@ const primes = genPrimes(10000000).map(BigInt);
  * @returns {bigint[]} 
  */
 function pollardRho(n, c = 1n) {
-  console.log(n, c);
   for (const p of primes) if (n % p === 0n) return p;
 
   if (n === 1n || isPrime(n)) return n;
