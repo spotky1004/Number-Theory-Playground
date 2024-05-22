@@ -1,5 +1,8 @@
 import gcd from "./gcd.js";
 import isPrime from "./isPrime.js";
+import genPrimes from "./genPrimes.js";
+
+const primes = genPrimes(10000000).map(BigInt);
 
 /**
  * @param {bigint} n 
@@ -7,24 +10,23 @@ import isPrime from "./isPrime.js";
  * @returns {bigint[]} 
  */
 function pollardRho(n, c = 1n) {
-  n = BigInt(n);
+  console.log(n, c);
+  for (const p of primes) if (n % p === 0n) return p;
+
   if (n === 1n || isPrime(n)) return n;
   if (n % 2n === 0n) return 2n;
 
-  function g(x) {
-    return (x * x + c) % n;
-  }
-  
   let a = 2n;
   let b = a;
   while (true) {
-    a = g(a);
-    b = g(g(b));
+    a = (a * a + c) % n;
+    b = (b * b + c) % n;
+    b = (b * b + c) % n;
     if (a === b) return pollardRho(n, c + 1n);
-    const dif = a - b;
-    const d = gcd(n, dif > 0 ? dif : -dif);
-    if (d === 1n) continue;
-    return d;
+    let dif = a - b;
+    if (dif < 0n) dif = -dif;
+    if (n % dif !== 0n) continue;
+    return gcd(n, dif);
   }
 }
 

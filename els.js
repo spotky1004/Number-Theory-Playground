@@ -60,7 +60,7 @@ const numsStr = {
   ONE: "1",
   MAX_MEMORY: "10^8",
   MAX_ITERABLE: "10^{11}",
-  MAX_FACTORIZATIONABLE: "10^{10}",
+  MAX_FACTORIZATIONABLE: "10^{100}",
   INF: "\\infty",
   MINUS_INF: "-\\infty"
 };
