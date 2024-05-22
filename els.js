@@ -59,8 +59,8 @@ const numsStr = {
   ZERO: "0",
   ONE: "1",
   MAX_MEMORY: "10^8",
-  MAX_ITERABLE: "10^{10}",
-  MAX_FACTORIZATIONABLE: "10^{50}",
+  MAX_ITERABLE: "10^{11}",
+  MAX_FACTORIZATIONABLE: "10^{10}",
   INF: "\\infty",
   MINUS_INF: "-\\infty"
 };
