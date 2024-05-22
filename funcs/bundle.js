@@ -1,3 +1,4 @@
+export { default as calcDivisorCount } from "./calcDivisorCount.js";
 export { default as calcDivisors } from "./calcDivisors.js";
 export { default as calcFib } from "./calcFib.js";
 export { default as calcOrder } from "./calcOrder.js";

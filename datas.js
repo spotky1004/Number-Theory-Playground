@@ -289,6 +289,30 @@ const datas = [
       };
     }
   },
+  // Divisor Count
+  {
+    strings: {
+      en: {
+        name: "Divisor Count",
+        description: "Calculate count of divisor of a number."
+      },
+      ko: {
+        name: "약수의 개수",
+        description: "어떤 수의 약수의 개수를 구해요."
+      }
+    },
+    icon: "rainy_heavy",
+    color: COL.BASIC,
+    inputVars: [
+      VARS.N(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE)
+    ],
+    calcFunc: (n) => {
+      const result = nt.calcDivisorCount(n);
+      return {
+        out: result.toString()
+      };
+    }
+  },
   // Divisors
   {
     strings: {
@@ -325,7 +349,6 @@ const datas = [
             line += factor;
             if (pow >= 2n) line += `^{${pow}}`;
             isFirstFactor = false;
-            console.log(factor, pow, line);
           }
         }
 
@@ -334,6 +357,7 @@ const datas = [
 
         out += line;
       }
+      out = `Count: ${result.length}\n` + out;
 
       return {
         out: out

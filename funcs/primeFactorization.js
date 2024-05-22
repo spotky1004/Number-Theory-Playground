@@ -34,6 +34,7 @@ function pollardRho(n, c = 1n) {
 export default function primeFactorization(x) {
   if (x <= 3n) return [x];
   const toFactorization = [x];
+  /** @type {bigint[]} */
   const factors = [];
   for (const n of toFactorization) {
     if (isPrime(n)) {
