@@ -448,7 +448,6 @@ const datas = [
     }
   },
   // Divide
-  // TODO: CRT
   {
     strings: {
       en: {
@@ -465,10 +464,7 @@ const datas = [
     inputVars: [
       VARS.A(NUMS.ZERO, NUMS.INF),
       VARS.B(NUMS.ZERO, NUMS.INF),
-      {
-        ...VARS.M(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE),
-        isPrime: true
-      }
+      VARS.M(NUMS.ZERO, NUMS.MAX_FACTORIZATIONABLE)
     ],
     calcFunc: (a, b, m) => {
       const result = nt.divide(a, b, m);
