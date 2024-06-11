@@ -752,9 +752,9 @@ const datas = [
     icon: "pivot_table_chart",
     color: COL.ADVANCED,
     inputVars: [
-      VARS.A(NUMS.ZERO, NUMS.INF),
-      VARS.B(NUMS.ZERO, NUMS.INF),
-      VARS.N(NUMS.ZERO, NUMS.INF),
+      VARS.A(NUMS.MINUS_INF, NUMS.INF),
+      VARS.B(NUMS.MINUS_INF, NUMS.INF),
+      VARS.N(NUMS.MINUS_INF, NUMS.INF),
     ],
     calcFunc: (a, b, n) => {
       const result = nt.egcd(a, b, n);
